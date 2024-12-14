@@ -1,0 +1,292 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+.josefin-sans {
+  font-family: "Josefin Sans", sans-serif; 
+}
+
+.roboto-thin {
+    font-family: "Roboto", system-ui;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", system-ui;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", system-ui;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", system-ui;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", system-ui;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", system-ui;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", system-ui;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", system-ui;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+body{
+    font-family: "Lato", sans-serif;
+    background: #F0F2F5;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+
+.top_header .menuheader {
+    background: #3C3C3C;
+    position: relative;
+}
+
+.top_header .menuheader nav {
+    width: 100%;
+}
+
+.top_header .menuheader nav .navbar-nav {
+    width: 100%;
+}
+
+.top_header .menuheader nav .navbar-nav .nav-item {
+    position: relative;
+}
+
+.top_header .menuheader nav .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.navbar-nav {
+    display: flex;           
+    align-items: center;     
+}
+
+.nav-item.text-left {
+    margin-right: auto; 
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;     
+}
+
+.nav-item {
+    margin-left: 15px;       
+}
+
+.nav-item .form-select {
+    background: none;      
+    border: none;           
+    color: #fff;            
+    padding: 0;             
+}
+
+.midheader {
+    position: relative;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.full-screen-img {
+    margin-top: 20px;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+.overlay {
+    width: 20%;
+    position: absolute; /* Positions the overlay relative to .midheader */
+    top: 40%; /* Centers vertically */
+    right: 60px; /* Adjust the distance from the right edge */
+    transform: translateY(-50%); /* Corrects the vertical centering */
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for readability */
+    padding: 10px 20px; /* Adds some padding around the text */
+    color: white; /* Text color for visibility */
+    border-radius: 5px; /* Optional: Rounds the corners of the background */
+    font-size: 1.5rem; /* Adjust the font size */
+    text-align: left; /* Aligns text to the right */
+}
+
+.roof_footer {
+    position: relative;
+    padding: 30px 0;
+    background: #3C3C3C;
+}
+
+.roof_footer h3 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: "Josefin Sans", sans-serif;
+    margin: 0 0 20px;
+    position: relative;
+    padding: 0 0 2px;
+}
+
+.roof_footer h3:before {
+    content: "";
+    background: #FF9800;
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.roof_footer p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 26px;
+    margin: 0 0 8px;
+}
+
+.roof_footer .bottomfooter_block {
+    border-top: 1px solid #ccc;
+    margin: 10px 0 0;
+    padding: 12px 0 0;
+}
+.roof_footer .bottomfooter_block p {
+    text-align: center;
+    margin: 0;
+}
+
+
+.marquee {
+  width: 100%;
+  height: 40px;
+  background-color: #FF9800; 
+  color: black;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative; 
+}
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%); 
+  }
+  to {
+    transform: translateX(-100%); 
+  }
+}

@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Passenger Way Workflow</title>
+        <link rel="stylesheet" href="{% static '/css/passenger.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    </head>
+    <body>
+        <div id="container">
+            <h2>Passenger Way Workflow</h2>
+            <hr>
+            <br>
+            <div id="slot-selection">
+                <h2>Choose a Slot to Send the Parcel</h2>
+                <p>Customer can select a slot on which day they want to send the
+                    parcel:</p>
+                <input type="text" id="delivery-date" placeholder="DD-MM-YYYY" required>
+                <button type="button" id="next-btn">Next</button>
+            </div>
+            <!-- Step 1: Product Description -->
+            <div id="passenger-way" style="display: none;">
+                <form id="product-form">
+                    <label for="product-description">Description of the Product
+                        :-</label>
+                    <textarea id="product-description" rows="3"
+                        placeholder="Enter Product Details" required></textarea>
+
+                    <label for="packet-content">Packet Content :-</label>
+                    <select id="packet-content" required>
+                        <option value>Select Content</option>
+                        <option value="food-items">Food Items</option>
+                        <option value="documents">Paper Documents</option>
+                        <option value="clothes">Clothes</option>
+                        <option value="electronics">Electronics Items</option>
+                        <option value="electronics">Pet Care Item</option>
+                        <option value="electronics">Medicines</option>
+                        <option value="electronics">House Decor</option>
+                        <option value="electronics">Others</option>
+                    </select>
+
+                    <label for="packet-weight">Packet Weight :-</label>
+                    <select id="packet-weight" required>
+                        <option value>Select Weight</option>
+                        <option value="1g-100g">1g - 100g</option>
+                        <option value="101g-500g">101g - 500g</option>
+                        <option value="500g-1kg">500g - 1kg</option>
+                        <option value="1kg-2kg">1kg - 2kg</option>
+                        <option value="2kg-5kg">2kg - 5kg</option>
+                        <option value="5kg">5kg - 10kg</option>
+                    </select>
+
+                    <label for="packet-type">Packet Type :-</label>
+                    <select id="packet-type" required>
+                        <option value>Select Type</option>
+                        <option value="envelope">Envelope</option>
+                        <option value="envelope">Packet</option>
+                        <option value="box">S Box</option>
+                        <option value="box">M Box</option>
+                        <option value="box">L Box</option>
+                        <option value="sack">Duffel Bag</option>
+                        <option value="crate">School Bag</option>
+                        <option value="crate">S Trolley</option>
+                    </select>
+                    <br>
+                    <br>
+                    <button type="submit">Submit Product Details</button>
+                </form>
+            </div>
+           
+            <div id="table-section" style="display: none;">
+                <h2>Delivery Product Report Table</h2>
+                <table border="1" id="data-table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Content</th>
+                            <th>Weight</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <hr>
+            <!-- Step 2: Passenger Verification -->
+            <div id="passenger-verification" style="display: none;">
+                <h2>Passenger Verification</h2>
+                <form id="verification-form">
+                    <label for="name">Passenger Name:</label>
+                    <input type="text" id="name" placeholder="Enter Full Name"
+                        required>
+
+                    <label for="aadhaar">Aadhaar Number:</label>
+                    <input type="text" id="aadhaar" maxlength="12"
+                        placeholder="Enter Aadhaar Number" required>
+
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" maxlength="10"
+                        placeholder="Enter Contact Number" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" rows="3" placeholder="Enter Address"
+                        required></textarea>
+
+                    <button type="submit" >Verify Passenger</button>
+                </form>
+            </div>
+
+            <!-- Step 3: Mode of Operation -->
+            <div id="mode-of-operation" style="display: none;">
+                <h2>Mode of Operation</h2>
+                <button id="self-ship-btn">Self-Ship</button>
+                <button id="doorstep-btn">Doorstep</button>
+            </div>
+
+            <!-- Step 4: Payment -->
+            <div id="payment-section" style="display: none;">
+                <h2>Payment</h2>
+                <p>Please pay the service fees to proceed.</p>
+                <button id="payment-complete-btn">Complete Payment</button>
+            </div>
+
+            <!-- Final Step: Operation Completed -->
+            <div id="operation-completed" style="display: none;">
+                <h2>Operation Completed</h2>
+                <p>Thank you for using Passenger Way Services!</p>
+            </div>
+        </div>
+
+        <script src="{% static '/js/passengerWay.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>  
+    </body>
+</html>

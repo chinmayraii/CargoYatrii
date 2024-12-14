@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Expressway Workflow</title>
+        <link rel="stylesheet" href="{% static '/css/express.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    </head>
+    <body>
+
+        <marquee class="marquee" behavior="scroll" direction="left" scrollamount="12">
+            NOTE :- Express Way Service is available on Madhya Pradesh (MP).
+        </marquee>
+        <br>
+        <div id="container">
+            <h1>Expressway Workflow</h1>
+            <hr>
+            <br>
+            <div id="workflow-section">
+
+                <!-- Slot Selection (Choose Date) -->
+                <div id="slot-selection">
+                    <h2>Choose a Slot to Send the Parcel</h2>
+                    <p>Customer can select a slot on which day they want to send
+                        the parcel:</p>
+                    <input type="text" id="delivery-date" placeholder="DD-MM-YYYY" required>
+                    <button type="button" id="next-btn">Next</button>
+                </div>
+
+                <!-- Expressway Details (Description of the Product) -->
+                <div id="express-way" style="display: none;">
+                    <form id="express-form">
+                        <label for="product-description">Description of the
+                            Product:</label>
+                        <textarea id="product-description" rows="4"
+                            placeholder="Enter Product Details"
+                            required></textarea>
+
+                        <label for="packet-content">Packet Content:</label>
+                        <select id="packet-content" required>
+                            <option value>Select Content</option>
+                            <option value="food-items">Food Items</option>
+                            <option value="documents">Paper Documents</option>
+                            <option value="clothes">Clothes</option>
+                            <option value="electronics">Electronics
+                                Items</option>
+                            <option value="pet-care">Pet Care Item</option>
+                            <option value="medicines">Medicines</option>
+                            <option value="house-decor">House Decor</option>
+                            <option value="others">Others</option>
+                        </select>
+
+                        <label for="packet-weight">Packet Weight:</label>
+                        <select id="packet-weight" required>
+                            <option value>Select Weight</option>
+                            <option value="1g-100g">1g - 100g</option>
+                            <option value="101g-500g">101g - 500g</option>
+                            <option value="500g-1kg">500g - 1kg</option>
+                            <option value="1kg-2kg">1kg - 2kg</option>
+                            <option value="2kg-5kg">2kg - 5kg</option>
+                            <option value="5kg">5kg</option>
+                        </select>
+
+                        <label for="packet-type">Packet Type:</label>
+                        <select id="packet-type" required>
+                            <option value>Select Type</option>
+                            <option value="envelope">Envelope</option>
+                            <option value="packet">Packet</option>
+                            <option value="s-box">S Box</option>
+                            <option value="m-box">M Box</option>
+                            <option value="l-box">L Box</option>
+                            <option value="duffel-bag">Duffel Bag</option>
+                            <option value="school-bag">School Bag</option>
+                            <option value="s-trolley">S Trolley</option>
+                        </select>
+
+                        <button type="submit" id="submit_btn">Submit Product
+                            Details</button>
+                    </form>
+                </div>
+                <div id="table-section" style="display: none;">
+                    <h2>Delivery Product Report Table</h2>
+                    <table border="1" id="data-table">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Content</th>
+                                <th>Weight</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <hr>
+                <!-- Mode of Operation -->
+                <div id="mode-of-operation" style="display: none;">
+                    <h2>Mode of Operation</h2>
+                    <button id="self-ship-btn">Self Ship</button>
+                    <button id="doorstep-btn">Doorstep</button>
+                </div>
+
+                <!-- Payment Section -->
+                <div id="payment-section" style="display: none;">
+                    <h2>Payment</h2>
+                    <p>Please complete the payment to proceed.</p>
+                    <button id="payment-complete-btn">Complete Payment</button>
+                </div>
+
+                <!-- Operation Completed Section -->
+                <div id="operation-completed" style="display: none;">
+                    <h2>Operation Completed</h2>
+                    <p>Thank you for using CargoYatri Services!</p>
+                </div>
+            </div>
+        </div>
+        <script src="{% static '/js/expressWay.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    </body>
+</html>
